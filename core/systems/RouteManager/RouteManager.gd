@@ -4,6 +4,7 @@ extends Node
 const LOADING_PATH := "res://app/screens/loading/loading.tscn"
 const LOBBY_PATH := "res://app/screens/lobby/lobby.tscn"
 const MAIN_PATH := "res://app/screens/main/main.tscn"
+const SETTINGS_PATH := "res://app/screens/settings/settings.tscn"
 
 class GoApi:
 	extends RefCounted
@@ -21,6 +22,9 @@ class GoApi:
 
 	func main() -> int:
 		return _router._change_scene(MAIN_PATH)
+
+	func settings() -> int:
+		return _router._change_scene(SETTINGS_PATH)
 
 var go: GoApi
 

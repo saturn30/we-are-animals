@@ -1,18 +1,53 @@
 [gd_scene format=3 uid="uid://c1qxrxajt5x56"]
 
-[ext_resource type="Script" uid="uid://vva5r16jj8c8" path="res://app/screens/lobby/label.gd" id="1_c74se"]
+[ext_resource type="Script" uid="uid://pwvf5p4gl4ua" path="res://app/screens/lobby/lobby.gd" id="1_re7jx"]
 
-[node name="Lobby" type="Node" unique_id=515148542]
+[node name="Lobby" type="Control" unique_id=424868905]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_re7jx")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=207596152]
+[node name="Background" type="ColorRect" parent="." unique_id=1833883036]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0666667, 0.109804, 0.188235, 1)
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=612638478]
-offset_right = 79.0
-offset_bottom = 25.0
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1235922211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureButton" unique_id=1635792609]
-layout_mode = 0
-offset_right = 292.0
-offset_bottom = 126.0
-text = "안녕하세요"
-script = ExtResource("1_c74se")
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=998489864]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1292779536]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "WE ARE ANIMALS"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1280639437]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=989936056]
+custom_minimum_size = Vector2(360, 80)
+layout_mode = 2
+text = "시작"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1838260877]
+custom_minimum_size = Vector2(360, 80)
+layout_mode = 2
+text = "설정"

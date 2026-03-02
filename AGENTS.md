@@ -12,6 +12,7 @@
   - `GameManager.route.go.loading()`
   - `GameManager.route.go.lobby()`
   - `GameManager.route.go.main()`
+  - `GameManager.route.go.settings()`
 
 ## 로딩 화면 패턴
 - `loading.tscn` 루트에는 스크립트를 붙이지 않는다.
