@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="we_are_animals"
+run/main_scene="res://app/screens/loading/loading.tscn"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://core/autoload/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom="res://features/ui/themes/AppTheme.tres"
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://i18n/strings.en.translation", "res://i18n/strings.ko.translation")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
